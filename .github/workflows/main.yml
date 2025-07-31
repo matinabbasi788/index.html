@@ -1,0 +1,23 @@
+name: Deploy to cPanel via FTP
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy
+
+jobs:
+  ftp-deploy:
+    name: Deploy via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.m4t1n.ir }}
+          username: ${{ secrets.test }}
+          password: ${{ secrets.[cD}D0HR8FpPX=D, }}
+          server-dir: ${{ secrets./public_html/ }}
